@@ -1,0 +1,174 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #3c87ff;
+    display:flex;
+    align-items:center;
+    justify-content: center;
+    height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container{
+    width: 450px;
+    background-color:white;
+    border-radius: 10px;
+}
+.container header{
+    padding: 25px 25px 0 25px;
+    position: relative;
+}
+.container header .user-text {
+    width: 100%;
+    padding: 13px 20px 13px 45px;
+    outline-color: #3c87ff;
+    border: 1px solid rgba(102, 102, 102, 0.411);
+    border-radius: 3px;
+    font-size: 18px;
+}
+.container header .user-text::placeholder{
+    font-size: 16px;
+}
+.container header::before{
+    content: "\f0ae";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 600;
+    position: absolute;
+    top: 39px;
+    left: 36px;
+    font-size: 20px;
+    color: #acacac;
+}
+.container nav {
+    margin: 20px 0;
+    width: 100%;
+    position:relative;
+    display: flex;
+    align-items: center;
+}
+.container nav::before{
+    content: '';
+    position: absolute;
+    width: calc(100% + 50px);
+    height: 1px;
+    background-color: #0000002c;
+    top: 38px;
+    left: -25px;
+}
+.container nav span{
+   margin-right: 25px;
+   font-size: 19;
+   cursor:pointer;
+   user-select: none;
+}
+.container nav span.active{
+    color:#3c87ff;
+    font-weight: bold;
+}
+.container nav span:last-of-type{
+    position:absolute;
+    right:0;
+    margin:0;
+    background: linear-gradient(135deg, #9d95f7 0%, #fc1e4e 100%);
+    color: white;
+    border-radius: 5px;
+    padding: 8px 13px;
+    letter-spacing: .5px; 
+    transition:background 1s ease;
+}
+
+/* Start li Takes */
+.container .list{
+    max-height: 280px;
+    margin: 50px 5px 15px 0;
+    list-style:none;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 0 25px 0;
+}
+
+.container .list::-webkit-scrollbar{
+    width: 5px;
+    
+}
+
+.container .list::-webkit-scrollbar-thumb{
+    background-color: #e6e6e6;
+    border-radius: 25px;
+}
+
+.container .list::-webkit-scrollbar-track{
+    background-color: #f1f1f1;
+    border-radius: 25px;
+}
+
+.container .list .task{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    margin-bottom: 40px;
+}
+
+.container .list .task:not(.task:last-of-type):before{
+    content: '';
+    position: absolute;
+    width: calc(100%);
+    height: 1px;
+    background-color: #0000001f;
+    bottom: -20px;
+    left: 0;
+}
+
+.container .list .task label p.checked{
+    text-decoration:line-through
+}
+
+.container .list .task label p{
+    margin-left: 5px;
+    display: inline-block;
+}
+
+.container .list .task .settings i{
+    cursor: pointer;
+}
+
+.settings .settings-menu{
+    position: absolute;
+    top: 3px;
+    right: -5px;
+    width: 110px;
+    padding: 5px 0;
+    margin: 2px;
+    list-style: none;
+    background-color: white;
+    box-shadow: 0 0 6px rgb(0 0 0 / 15%);
+    border-radius: 5px;
+    z-index: 10;
+    transform: scale(0);
+    transition: transform .2s ease;
+    transform-origin: top right;
+}
+
+.settings:hover .settings-menu{
+    transform: scale(1);
+}
+
+.settings .settings-menu li{
+    font-size: 16px;
+    padding: 10px 15px;
+    margin-bottom: 2px;
+    justify-content: flex-start;
+    cursor: pointer;
+}
+
+.settings .settings-menu li:hover{
+    background-color: #f5f5f5;
+}
+
+.settings .settings-menu li i{
+    padding-right: 8px;
+}

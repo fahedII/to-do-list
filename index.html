@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/all-main.css" />
+    <title>to-do List</title>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <input
+          id="user-text"
+          class="user-text"
+          type="text"
+          placeholder="Add a New Task"
+          maxlength="40"
+        />
+        <nav>
+          <span class="active" id="all">All</span>
+          <span id="pending">pending</span>
+          <span id="completed">Completed</span>
+          <span id="clear-all">Clear All</span>
+        </nav>
+      </header>
+      <ul class="list" id="parent-tasks"></ul>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
